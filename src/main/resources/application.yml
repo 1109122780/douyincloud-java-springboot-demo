@@ -9,7 +9,7 @@ spring:
       authentication: admin
 
   redis:
-    url: redis://${REDIS_USERNAME}:${REDIS_PASSWORD}@redis-cnlf6jk9ck61m53ez.redis.ivolces.com:6379
+    url: redis://${REDIS_USERNAME}:${REDIS_PASSWORD}@${REDIS_ADDRESS}
     timeout: 1000
 
 cloud:
