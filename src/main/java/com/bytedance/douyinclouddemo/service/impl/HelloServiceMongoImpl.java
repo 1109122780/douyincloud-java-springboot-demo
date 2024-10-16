@@ -1,15 +1,8 @@
 package com.bytedance.douyinclouddemo.service.impl;
-
-import com.bytedance.douyinclouddemo.model.User;
 import com.bytedance.douyinclouddemo.service.HelloService;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 @Service
 @Qualifier("mongo")
