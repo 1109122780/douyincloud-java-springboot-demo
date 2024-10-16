@@ -14,8 +14,8 @@ import javax.annotation.Resource;
 @Service
 @Qualifier("mongo")
 public class HelloServiceMongoImpl implements HelloService {
-    @Resource
-    private MongoTemplate mongoTemplate;
+//    @Resource
+//    private MongoTemplate mongoTemplate;
 
     @Override
     public String hello(String target) {

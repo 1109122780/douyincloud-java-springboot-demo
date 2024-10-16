@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 @Qualifier("redis")
 public class HelloServiceRedisImpl implements HelloService {
-    @Autowired
-    private StringRedisTemplate redisTemplate;
+//    @Autowired
+//    private StringRedisTemplate redisTemplate;
 
     @Override
     public String hello(String target) {
