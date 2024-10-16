@@ -14,14 +14,10 @@ public class HelloServiceRedisImpl implements HelloService {
 
     @Override
     public String hello(String target) {
-        if(!redisTemplate.hasKey(target)){
-            return "";
-        }
-        return redisTemplate.opsForValue().get(target);
+        return "hello Redis";
     }
 
     @Override
     public void setName(String target, String name) {
-        redisTemplate.opsForValue().set(target,name);
     }
 }

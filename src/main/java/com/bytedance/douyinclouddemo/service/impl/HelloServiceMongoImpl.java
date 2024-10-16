@@ -19,20 +19,10 @@ public class HelloServiceMongoImpl implements HelloService {
 
     @Override
     public String hello(String target) {
-        Query query = new Query();
-        query.addCriteria(Criteria.where("target").is(target));
-        User user = mongoTemplate.findOne(query, User.class, "demo");
-        return user.name;
+        return "Hello Mongo";
     }
 
     @Override
     public void setName(String target, String name) {
-        if(!mongoTemplate.collectionExists("demo")){
-            mongoTemplate.createCollection("demo");
-        }
-        Query query = new Query();
-        query.addCriteria(Criteria.where("target").is(target));
-        Update update = Update.update("name", name);
-        mongoTemplate.upsert(query,update,"demo");
     }
 }
