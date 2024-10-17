@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 @Service
 @Qualifier("redis")
 public class HelloServiceRedisImpl implements HelloService {
-    @Autowired
+    @Resource
     private StringRedisTemplate redisTemplate;
 
     @Override
