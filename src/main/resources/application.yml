@@ -4,9 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_ADDRESS}
-      database: demo
-      authentication: admin
+      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_ADDRESS}/demo?authSource=admin
 
   redis:
     host: ${REDIS_ADDRESS}
